@@ -8,7 +8,7 @@ namespace Mango.Service.CouponAPI.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-        "Freezings", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        "Freezingss", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
