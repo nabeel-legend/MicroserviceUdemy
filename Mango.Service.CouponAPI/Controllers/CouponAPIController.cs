@@ -62,6 +62,23 @@ namespace Mango.Service.CouponAPI.Controllers
             return _responseDto;
         }
 
+
+        [HttpGet]
+        [Route("{CouponCode/{code}")]
+        public ResponseDto GetCouponCOde(string code)
+        {
+            try
+            {
+                Coupon couponlist = _db.Coupons.First(u => u.CouponCode.ToLower() == code);
+                _responseDto.Result = _mapper.Map<CouponDto>(couponlist);
+            }
+            catch (Exception ex)
+            {
+                _responseDto.IsSuccess = false;
+                _responseDto.Message = ex.Message;
+            }
+            return _responseDto;
+        }
         [HttpPost]
         [Route("CreateCoupon")]
         public ResponseDto CraeteCoupon([FromBody] CouponDto couponDto)
