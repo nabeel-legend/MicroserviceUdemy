@@ -25,7 +25,7 @@ namespace Mango.Service.CouponAPI.Controllers
             _mapper = mapper1;
         }
 
-
+        //comment
         // GET: api/<CouponAPIController>
         [HttpGet]
         public ResponseDto Get()
